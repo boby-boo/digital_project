@@ -1,5 +1,5 @@
 # Digital project
-Site to project - **https://happy-coaching-sepia.vercel.app/**
+Site to project - **https://digital-project-weld.vercel.app/**
 
 ## Technologies Used in the Project:
 
