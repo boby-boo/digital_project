@@ -60,6 +60,8 @@ body {
     max-width: 222px;
     width: 100%;
     height: 71px;
+    @include template-font(12, 400, $main-color);
+    letter-spacing: 2px;
     background-color: $light-color;
     @include template-transition(opacity);
 
