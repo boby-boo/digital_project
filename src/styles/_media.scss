@@ -1,0 +1,291 @@
+@media (width <= 1024px) {
+    .header {
+        &-list {
+            padding-right: 0;
+            column-gap: 30px;
+        }
+    }
+
+    .project {
+        &-row {
+            @include template-flex(center, center);
+            flex-direction: column;
+        }
+
+        &-content {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            row-gap: 25px;
+            padding-bottom: 50px;
+        }
+
+        &-controls {
+            &::after {
+                display: none;
+            }
+        }
+
+        &-slider {
+            max-width: 640px;
+        }
+    }
+
+    .about {
+        &-row {
+            padding: 10px 0;
+            flex-direction: column-reverse;
+        }
+
+        &-content {
+            max-width: 800px;
+            text-align: center;
+
+            h2,
+            button {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .tasks {
+        padding: 30px 0;
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        &-list {
+            flex-direction: column;
+            justify-self: flex-start;
+
+            li {
+                &:first-child {
+                    max-width: 570px;
+                }
+
+                &:nth-child(even) {
+                    flex-direction: row-reverse;
+                }
+
+                span {
+                    max-width: 116px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .portfolio {
+        &-list {
+            gap: 15px;
+        }
+    }
+
+    .title {
+        font-size: 50px;
+        text-align: center;
+    }
+}
+
+@media (width <= 768px) {
+    .header {
+        &-row {
+            padding: 30px 0 0;
+        }
+
+        &-list {
+            display: none;
+        }
+
+        &-button {
+            display: inline-block;
+        }
+    }
+
+    .project {
+        padding: 30px 0;
+
+        &-content {
+            padding-bottom: 25px;
+
+            h2 {
+                font-size: 50px;
+            }
+
+            h3 {
+                font-size: 44px;
+            }
+        }
+
+        &-slider {
+            height: 412px !important;
+        }
+
+        .swiper {
+            &-slide {
+                max-width: 770px !important;
+                width: 100% !important;
+                height: 412px !important;
+            }
+        }
+    }
+
+    .about {
+        padding: 30px 0;
+
+        &-images {
+            grid-gap: 10px;
+        }
+    }
+
+    .contact {
+        padding: 30px 0;
+
+        &-form {
+            margin: 0 auto;
+            max-width: 600px;
+
+            p,
+            button {
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+
+        &-image {
+            display: none;
+        }
+    }
+
+    .tasks {
+        span {
+            font-size: 120px;
+        }
+
+        &-list {
+            row-gap: 10px;
+
+            li {
+                span {
+                    font-size: 150px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .portfolio {
+        padding: 30px 0;
+
+        h2 {
+            margin-bottom: 22px;
+        }
+
+        &-list {
+            grid-template: repeat(5, 255px) / minmax(30px, 1fr);
+            gap: 15px;
+            font-size: 20px;
+
+            li {
+                &:nth-child(1) {
+                    grid-column: 1 / 3;
+                    grid-row: 1 / 2;
+                }
+
+                &:nth-child(2) {
+                    grid-column: 1 / 3;
+                    grid-row: 2 / 3;
+                }
+
+                &:nth-child(3) {
+                    grid-column: 1 / 3;
+                    grid-row: 3 / 4;
+                    font-size: inherit;
+                }
+
+                &:nth-child(4) {
+                    grid-column: 1 / 3;
+                    grid-row: 4 / 5;
+                }
+
+                &:nth-child(5) {
+                    grid-column: 1 / 3;
+                    grid-row: 5 / 6;
+                    font-size: inherit;
+                }
+            }
+        }
+
+        &-btn {
+            margin: 0 auto;
+        }
+    }
+
+    .footer {
+        &-list {
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        &-logo {
+            margin-bottom: 30px;
+        }
+
+        &-list__item {
+            text-align: center;
+            cursor: pointer;
+
+            h3 {
+                margin-bottom: 10px;
+            }
+
+            ul {
+                display: none;
+                align-items: center;
+            }
+        }
+    }
+}
+
+@media (width <= 600px) {
+    .about {
+        &-images {
+            display: none;
+        }
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .tasks {
+        &-list {
+            li {
+                span {
+                    font-size: 100px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .portfolio-list {
+        li {
+            a {
+                div {
+                    h3 {
+                        font-size: 2em;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,123 @@
+.project {
+    padding-bottom: 60px;
+
+    &-row {
+        @include template-flex(space-between, flex-end);
+        column-gap: 40px;
+    }
+
+    &-content {
+        @include template-flex(space-between, flex-start);
+        flex-direction: column;
+        row-gap: 90px;
+        padding-bottom: 101px;
+
+        h2,
+        h3 {
+            @extend .title;
+            margin-bottom: 0;
+        }
+
+        h3 {
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $main-color;
+        }
+    }
+
+    &-controls {
+        position: relative;
+        @include template-flex(space-between, center);
+        column-gap: 23px;
+        max-width: 130px;
+        width: 100%;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: -500%;
+            width: 500%;
+            height: 1px;
+            background-color: #f2f2f2;
+        }
+
+        .project-btn {
+            @include template-flex(center, center);
+            max-width: 52px;
+            width: 100%;
+            height: 53px;
+            border: 1px solid #f2f2f2;
+            @include template-transition(background-color);
+
+            &:hover {
+                background-color: #f9f9f9;
+            }
+
+            &__prev-btn {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    .project-counter {
+        @include template-flex(space-between, center);
+        max-width: 144px;
+        width: 100%;
+        @include template-font(24, 400, $secondary-color);
+        line-height: 1;
+
+        &__decoration {
+            width: 2px;
+            height: 44px;
+            display: block;
+            transform: rotate(-135deg);
+            background-color: #e0e0e0;
+        }
+    }
+
+    &-slider {
+        position: relative;
+        max-width: 770px;
+        width: 100%;
+        height: 829px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &__btn {
+            @extend .main-button;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    &-slide {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.swiper {
+    &-slide {
+        max-width: 770px !important;
+        width: 100% !important;
+        height: 829px !important;
+    }
+
+    &-pagination-current {
+        width: 30px;
+    }
+
+    &-pagination-total {
+        width: 30px;
+    }
+}
+
+.sub-slider {
+    max-width: 277px;
+    height: 64px;
+}

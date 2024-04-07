@@ -1,0 +1,91 @@
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    border-radius: 8px;
+
+    &-thumb {
+        background-color: $main-color;
+        border-radius: 8px;
+    }
+
+    &-track {
+        background-color: $hover-color;
+    }
+}
+
+body {
+    font:
+        normal 400 18px/1.6 Hoves,
+        sans-serif;
+    color: $main-color;
+    background-color: $light-color;
+}
+
+.container {
+    max-width: 1190px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.title {
+    margin-bottom: 60px;
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 1;
+    color: $secondary-color;
+}
+
+.icon {
+    color: $main-color;
+}
+
+.main-button,
+.main-button__dark {
+    &::after {
+        content: '';
+        width: 18px;
+        height: 8px;
+        display: block;
+        background: url(assets/icons/arrow.svg) center/cover no-repeat;
+    }
+}
+
+.main-button {
+    @include template-flex(center, center);
+    column-gap: 12px;
+    max-width: 222px;
+    width: 100%;
+    height: 71px;
+    background-color: $light-color;
+    @include template-transition(opacity);
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    &::after {
+        content: '';
+        width: 18px;
+        height: 8px;
+        display: block;
+        background: url(assets/icons/arrow.svg) center/cover no-repeat;
+    }
+
+    &__dark {
+        @extend .main-button;
+        color: $light-color;
+        background-color: $main-color;
+
+        &::after {
+            background: url(assets/icons/arrow-light.svg) center/cover no-repeat;
+        }
+    }
+}
+
+.none {
+    display: none !important;
+}

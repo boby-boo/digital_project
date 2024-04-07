@@ -1,0 +1,60 @@
+.contact {
+    padding: 60px 0;
+
+    h2 {
+        @extend .title;
+        margin-bottom: 22px;
+    }
+
+    &-row {
+        @include template-flex(space-between, flex-start);
+        column-gap: 30px;
+    }
+
+    &-form {
+        margin-bottom: 21px;
+        @include template-flex(flex-start, flex-start);
+        flex-direction: column;
+        row-gap: 10px;
+        max-width: 391px;
+        width: 100%;
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 15px 21px;
+            @include template-font(14, 400, #8d8d8d);
+            background-color: #f3f3f3;
+        }
+
+        p {
+            margin: 12px 0;
+            @include template-font(14, 400, inherit);
+            line-height: 1;
+        }
+
+        textarea {
+            resize: none;
+            min-height: 147px;
+        }
+
+        button {
+            @extend .main-button__dark;
+        }
+    }
+
+    &-input {
+        width: 100%;
+    }
+
+    &-image {
+        height: 369px;
+        max-width: 749px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

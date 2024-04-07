@@ -1,0 +1,30 @@
+.tasks {
+    padding: 60px 0;
+
+    h2 {
+        @extend .title;
+    }
+
+    &-list {
+        @include template-flex(space-between, center);
+        flex-wrap: wrap;
+        column-gap: 20px;
+
+        li {
+            @include template-flex(center, center);
+            column-gap: 30px;
+            max-width: 570px;
+            width: 100%;
+
+            span {
+                @include template-flex(center, center);
+                @include template-font(200, 700, #f2f2f2);
+                line-height: 1;
+            }
+
+            &:first-child {
+                max-width: 413px;
+            }
+        }
+    }
+}
